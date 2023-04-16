@@ -1,0 +1,13 @@
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\bin\Debug\Игра про осьминога.exe.config
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\bin\Debug\Игра про осьминога.exe
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\bin\Debug\Игра про осьминога.pdb
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра про осьминога.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра про осьминога.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра_про_осьминога.Form1.resources
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра_про_осьминога.Properties.Resources.resources
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра про осьминога.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра про осьминога.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра про осьминога.exe
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра про осьминога.pdb
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра_про_осьминога.RulesForm.resources
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра_про_осьминога.SettingsForm.resources
