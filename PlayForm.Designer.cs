@@ -30,41 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayForm));
-            this.backToMenuButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.mainPlayer = new System.Windows.Forms.PictureBox();
             this.GoUpTimer = new System.Windows.Forms.Timer(this.components);
             this.GoDownTimer = new System.Windows.Forms.Timer(this.components);
             this.GoLeftTimer = new System.Windows.Forms.Timer(this.components);
             this.GoRightTimer = new System.Windows.Forms.Timer(this.components);
+            this.BackToMenuButton = new System.Windows.Forms.PictureBox();
+            this.closeButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.mainPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackToMenuButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             this.SuspendLayout();
-            // 
-            // backToMenuButton
-            // 
-            this.backToMenuButton.BackColor = System.Drawing.Color.Chartreuse;
-            this.backToMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.backToMenuButton.Location = new System.Drawing.Point(-1, 1);
-            this.backToMenuButton.Name = "backToMenuButton";
-            this.backToMenuButton.Size = new System.Drawing.Size(52, 24);
-            this.backToMenuButton.TabIndex = 0;
-            this.backToMenuButton.Text = "←";
-            this.backToMenuButton.UseVisualStyleBackColor = false;
-            this.backToMenuButton.Click += new System.EventHandler(this.BackToMenuButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.closeButton.Location = new System.Drawing.Point(1248, 0);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(52, 24);
-            this.closeButton.TabIndex = 1;
-            this.closeButton.Text = "x";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // mainPlayer
             // 
@@ -96,33 +72,56 @@
             this.GoRightTimer.Interval = 10;
             this.GoRightTimer.Tick += new System.EventHandler(this.GoRightTimer_Tick);
             // 
+            // BackToMenuButton
+            // 
+            this.BackToMenuButton.BackColor = System.Drawing.Color.Lime;
+            this.BackToMenuButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackToMenuButton.BackgroundImage")));
+            this.BackToMenuButton.Location = new System.Drawing.Point(-1, -1);
+            this.BackToMenuButton.Name = "BackToMenuButton";
+            this.BackToMenuButton.Size = new System.Drawing.Size(52, 24);
+            this.BackToMenuButton.TabIndex = 3;
+            this.BackToMenuButton.TabStop = false;
+            this.BackToMenuButton.Click += new System.EventHandler(this.BackToMenuButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+            this.closeButton.Location = new System.Drawing.Point(1248, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(52, 24);
+            this.closeButton.TabIndex = 4;
+            this.closeButton.TabStop = false;
+            // 
             // PlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1302, 713);
-            this.Controls.Add(this.mainPlayer);
             this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.backToMenuButton);
+            this.Controls.Add(this.BackToMenuButton);
+            this.Controls.Add(this.mainPlayer);
+            this.DoubleBuffered = true;
             this.Name = "PlayForm";
             this.Text = "PlayForm";
             this.Load += new System.EventHandler(this.PlayForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PlayForm_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PlayForm_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.mainPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackToMenuButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button backToMenuButton;
-        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.PictureBox mainPlayer;
         private System.Windows.Forms.Timer GoUpTimer;
         private System.Windows.Forms.Timer GoDownTimer;
         private System.Windows.Forms.Timer GoLeftTimer;
         private System.Windows.Forms.Timer GoRightTimer;
+        private System.Windows.Forms.PictureBox BackToMenuButton;
+        private System.Windows.Forms.PictureBox closeButton;
     }
 }
