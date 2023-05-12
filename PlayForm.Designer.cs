@@ -76,6 +76,7 @@
             // 
             this.BackToMenuButton.BackColor = System.Drawing.Color.Lime;
             this.BackToMenuButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackToMenuButton.BackgroundImage")));
+            this.BackToMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackToMenuButton.Location = new System.Drawing.Point(-1, -1);
             this.BackToMenuButton.Name = "BackToMenuButton";
             this.BackToMenuButton.Size = new System.Drawing.Size(52, 24);
@@ -87,11 +88,13 @@
             // 
             this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.Location = new System.Drawing.Point(1248, 0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(52, 24);
             this.closeButton.TabIndex = 4;
             this.closeButton.TabStop = false;
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // PlayForm
             // 

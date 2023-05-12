@@ -17,10 +17,15 @@ namespace Игра_про_осьминога
             InitializeComponent();
         }
 
+        private Random random;
+
         //PictureBox[] bubble;
         //int backgroundspeed;
         //Random random;
         int playerSpeed;
+        PictureBox[] seaUrchins;
+        int seaUrchinsSpeed;
+
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -63,8 +68,24 @@ namespace Игра_про_осьминога
         {
             //backgroundspeed = 5;
             //bubble = new PictureBox[20];
-            //random = new Random();
+            random = new Random();
             playerSpeed = 15;
+            seaUrchins = new PictureBox[3];
+            int seaUrchinsSize = random.Next(60,90);
+            seaUrchinsSpeed = 3;
+            Image urchins = Image.FromFile("Debug\\ёж.png");
+            for (int i = 0; i < seaUrchins.Length; i++)
+            {
+                seaUrchins[i] = new PictureBox();
+                seaUrchins[i].Image = urchins;
+                seaUrchins[i].Size = new Size(seaUrchinsSize, seaUrchinsSize);
+                seaUrchins[i].SizeMode = PictureBoxSizeMode.Zoom;
+                seaUrchins[i].BackColor = Color.Black;
+                seaUrchins[i].Location = new Point((i+1)*random.Next(90,160) + 1000, random.Next(450,600));
+                
+
+                this.Controls.Add(seaUrchins[i]);
+            }
             //for (int i = 0; i < bubble.Length; i++)
             //{
             //    bubble[i] = new PictureBox();
@@ -83,6 +104,7 @@ namespace Игра_про_осьминога
 
             //    this.Controls.Add(bubble[i]);
             //}
+
         }
         private void PlayForm_KeyDown(object sender, KeyEventArgs e)
         {

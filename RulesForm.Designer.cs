@@ -28,54 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CloseBbutton = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RulesForm));
+            this.BackToMenuButton = new System.Windows.Forms.PictureBox();
+            this.closeButton = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.BackToMenuButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             this.SuspendLayout();
             // 
-            // CloseBbutton
+            // BackToMenuButton
             // 
-            this.CloseBbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CloseBbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseBbutton.Font = new System.Drawing.Font("Book Antiqua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CloseBbutton.Location = new System.Drawing.Point(748, -1);
-            this.CloseBbutton.Name = "CloseBbutton";
-            this.CloseBbutton.Size = new System.Drawing.Size(52, 27);
-            this.CloseBbutton.TabIndex = 5;
-            this.CloseBbutton.Text = "x";
-            this.CloseBbutton.UseVisualStyleBackColor = false;
-            this.CloseBbutton.Click += new System.EventHandler(this.CloseBbutton_Click);
-            this.CloseBbutton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CloseBbutton_MouseMove);
+            this.BackToMenuButton.BackColor = System.Drawing.Color.Lime;
+            this.BackToMenuButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackToMenuButton.BackgroundImage")));
+            this.BackToMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackToMenuButton.Location = new System.Drawing.Point(-1, -1);
+            this.BackToMenuButton.Name = "BackToMenuButton";
+            this.BackToMenuButton.Size = new System.Drawing.Size(52, 24);
+            this.BackToMenuButton.TabIndex = 7;
+            this.BackToMenuButton.TabStop = false;
+            this.BackToMenuButton.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // buttonBack
+            // closeButton
             // 
-            this.buttonBack.BackColor = System.Drawing.Color.Lime;
-            this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBack.Location = new System.Drawing.Point(1, -1);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(52, 27);
-            this.buttonBack.TabIndex = 6;
-            this.buttonBack.Text = "←";
-            this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.Location = new System.Drawing.Point(747, -1);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(52, 24);
+            this.closeButton.TabIndex = 8;
+            this.closeButton.TabStop = false;
+            this.closeButton.Click += new System.EventHandler(this.CloseBbutton_Click);
             // 
             // RulesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.CloseBbutton);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.BackToMenuButton);
             this.Name = "RulesForm";
             this.Text = "RulesForm";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RulesForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RulesForm_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.BackToMenuButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button CloseBbutton;
-        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.PictureBox BackToMenuButton;
+        private System.Windows.Forms.PictureBox closeButton;
     }
 }
