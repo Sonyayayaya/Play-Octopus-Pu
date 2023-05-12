@@ -65,5 +65,12 @@ namespace Игра_про_осьминога
             SettingsForm settingsForm = new SettingsForm();
             settingsForm.Show();
         }
+
+        private void ButtonPlay_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PlayForm playForm = new PlayForm();
+            playForm.Show();
+        }
     }
 }

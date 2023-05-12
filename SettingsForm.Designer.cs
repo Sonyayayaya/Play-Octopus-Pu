@@ -34,24 +34,26 @@
             // 
             // CloseBbutton
             // 
-            this.CloseBbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CloseBbutton.Font = new System.Drawing.Font("Book Antiqua", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CloseBbutton.Location = new System.Drawing.Point(540, 401);
+            this.CloseBbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CloseBbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseBbutton.Font = new System.Drawing.Font("Book Antiqua", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CloseBbutton.Location = new System.Drawing.Point(748, 1);
             this.CloseBbutton.Name = "CloseBbutton";
-            this.CloseBbutton.Size = new System.Drawing.Size(248, 37);
+            this.CloseBbutton.Size = new System.Drawing.Size(52, 24);
             this.CloseBbutton.TabIndex = 5;
-            this.CloseBbutton.Text = "Close";
+            this.CloseBbutton.Text = "x";
             this.CloseBbutton.UseVisualStyleBackColor = false;
             this.CloseBbutton.Click += new System.EventHandler(this.CloseBbutton_Click);
             // 
             // buttonBack
             // 
-            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonBack.Location = new System.Drawing.Point(12, 402);
+            this.buttonBack.BackColor = System.Drawing.Color.Lime;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.Location = new System.Drawing.Point(0, 1);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(217, 37);
+            this.buttonBack.Size = new System.Drawing.Size(52, 24);
             this.buttonBack.TabIndex = 7;
-            this.buttonBack.Text = "Back";
+            this.buttonBack.Text = "←";
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 

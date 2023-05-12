@@ -51,6 +51,7 @@
             // ButtonPlay
             // 
             this.ButtonPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ButtonPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonPlay.Font = new System.Drawing.Font("Book Antiqua", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ButtonPlay.Location = new System.Drawing.Point(426, 307);
             this.ButtonPlay.Name = "ButtonPlay";
@@ -58,12 +59,14 @@
             this.ButtonPlay.TabIndex = 1;
             this.ButtonPlay.Text = "Play";
             this.ButtonPlay.UseVisualStyleBackColor = false;
+            this.ButtonPlay.Click += new System.EventHandler(this.ButtonPlay_Click);
             this.ButtonPlay.MouseEnter += new System.EventHandler(this.ButtonPlay_MouseEnter);
             this.ButtonPlay.MouseLeave += new System.EventHandler(this.ButtonPlay_MouseLeave);
             // 
             // SettingsButton
             // 
             this.SettingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.SettingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SettingsButton.Font = new System.Drawing.Font("Book Antiqua", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SettingsButton.Location = new System.Drawing.Point(426, 442);
             this.SettingsButton.Name = "SettingsButton";
@@ -76,6 +79,7 @@
             // RulesButton
             // 
             this.RulesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.RulesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RulesButton.Font = new System.Drawing.Font("Book Antiqua", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RulesButton.Location = new System.Drawing.Point(426, 522);
             this.RulesButton.Name = "RulesButton";
@@ -88,6 +92,7 @@
             // CloseBbutton
             // 
             this.CloseBbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CloseBbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseBbutton.Font = new System.Drawing.Font("Book Antiqua", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseBbutton.Location = new System.Drawing.Point(426, 598);
             this.CloseBbutton.Name = "CloseBbutton";
