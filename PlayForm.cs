@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +20,13 @@ namespace Игра_про_осьминога
 
         private Random random;
 
-        //PictureBox[] bubble;
         //int backgroundspeed;
         //Random random;
         int playerSpeed;
         PictureBox[] seaUrchins;
         int seaUrchinsSpeed;
-
+        PictureBox[] bubble;
+        int bubbleSpeed;
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -66,15 +67,13 @@ namespace Игра_про_осьминога
         }
         private void PlayForm_Load(object sender, EventArgs e)
         {
-            //backgroundspeed = 5;
-            //bubble = new PictureBox[20];
             random = new Random();
             playerSpeed = 15;
+
+            seaUrchinsSpeed = 8;
             seaUrchins = new PictureBox[3];
             int seaUrchinsSize = random.Next(60,90);
-            seaUrchinsSpeed = 3;
             Image urchins = Image.FromFile("ёж.png");
-
             for (int i = 0; i < seaUrchins.Length; i++)
             {
                 seaUrchins[i] = new PictureBox
@@ -88,24 +87,24 @@ namespace Игра_про_осьминога
 
                 this.Controls.Add(seaUrchins[i]);
             }
-            //for (int i = 0; i < bubble.Length; i++)
-            //{
-            //    bubble[i] = new PictureBox();
-            //    bubble[i].BorderStyle = BorderStyle.None;
-            //    bubble[i].Location = new Point(random.Next(-1000,1280), random.Next(140,320));
-            //    if (i % 2 == 0)
-            //    {
-            //        bubble[i].Size = new Size(random.Next(50,50), random.Next(50,50));
-            //        bubble[i].BackColor = Color.FromArgb(random.Next(50,125), 255, 200, 200);
-            //    }
-            //    else
-            //    {
-            //        bubble[i].Size = new Size(55,45);
-            //        bubble[i].BackColor = Color.FromArgb(random.Next(50, 125), 255, 202, 202);
-            //    }
 
-            //    this.Controls.Add(bubble[i]);
-            //}
+            bubbleSpeed = 5;
+            bubble = new PictureBox[20];
+            int bubbleSize = random.Next(50, 80);
+            Image bubbles = Image.FromFile("пузырёк.png");
+            for (int i = 0; i < bubble.Length; i++)
+            {
+                bubble[i] = new PictureBox
+                {
+                    Image = bubbles,
+                    Size = new Size(bubbleSize, bubbleSize),
+                    SizeMode = PictureBoxSizeMode.Zoom,
+                    BackColor = Color.Transparent,
+                    Location = new Point((i + 1) * random.Next(150, 250) + 1000, random.Next(120, 550))
+                };
+
+                this.Controls.Add(bubble[i]);
+            }
 
         }
         private void PlayForm_KeyDown(object sender, KeyEventArgs e)
@@ -162,9 +161,28 @@ namespace Игра_про_осьминога
 
         }
 
+        private void GoBubbles(PictureBox[] bubble, int speed)
+        {
+            for (int i = 0; i < bubble.Length; i++)
+            {
+                bubble[i].Left -= (int)(speed * Math.PI) + (int)(Math.Sin(bubble[i].Left * 20 + Math.PI * 100) * + Math.Cos(bubble[i].Left * 20 + Math.PI * 100));
+
+                if (bubble[i].Left < this.Left)
+                {
+                    int bubbleSize = random.Next(50, 80);
+                    bubble[i].Size = new Size(bubbleSize, bubbleSize);
+                    bubble[i].Location = new Point((i + 1) * random.Next(150, 250) + 1000, random.Next(120, 550));
+                }
+            }
+
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            GoBubbles(bubble, bubbleSpeed);
+        }
         private void CollisionWithSeaUrchin()
         {
-            for (int i = 0; i< seaUrchins.Length; i++)
+            for (int i = 0; i < seaUrchins.Length; i++)
             {
                 if (mainPlayer.Bounds.IntersectsWith(seaUrchins[i].Bounds))
                 {

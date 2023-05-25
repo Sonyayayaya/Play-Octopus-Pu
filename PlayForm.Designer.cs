@@ -38,6 +38,7 @@
             this.BackToMenuButton = new System.Windows.Forms.PictureBox();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.GoUrchisTimer = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackToMenuButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
@@ -103,6 +104,12 @@
             this.GoUrchisTimer.Interval = 10;
             this.GoUrchisTimer.Tick += new System.EventHandler(this.GoUrchisTimer_Tick);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // PlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,5 +141,6 @@
         private System.Windows.Forms.PictureBox BackToMenuButton;
         private System.Windows.Forms.PictureBox closeButton;
         private System.Windows.Forms.Timer GoUrchisTimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }
