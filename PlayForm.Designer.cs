@@ -37,6 +37,7 @@
             this.GoRightTimer = new System.Windows.Forms.Timer(this.components);
             this.BackToMenuButton = new System.Windows.Forms.PictureBox();
             this.closeButton = new System.Windows.Forms.PictureBox();
+            this.GoUrchisTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackToMenuButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
@@ -79,7 +80,7 @@
             this.BackToMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackToMenuButton.Location = new System.Drawing.Point(-1, -1);
             this.BackToMenuButton.Name = "BackToMenuButton";
-            this.BackToMenuButton.Size = new System.Drawing.Size(52, 24);
+            this.BackToMenuButton.Size = new System.Drawing.Size(52, 28);
             this.BackToMenuButton.TabIndex = 3;
             this.BackToMenuButton.TabStop = false;
             this.BackToMenuButton.Click += new System.EventHandler(this.BackToMenuButton_Click);
@@ -91,10 +92,16 @@
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.Location = new System.Drawing.Point(1248, 0);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(52, 24);
+            this.closeButton.Size = new System.Drawing.Size(52, 28);
             this.closeButton.TabIndex = 4;
             this.closeButton.TabStop = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // GoUrchisTimer
+            // 
+            this.GoUrchisTimer.Enabled = true;
+            this.GoUrchisTimer.Interval = 10;
+            this.GoUrchisTimer.Tick += new System.EventHandler(this.GoUrchisTimer_Tick);
             // 
             // PlayForm
             // 
@@ -126,5 +133,6 @@
         private System.Windows.Forms.Timer GoRightTimer;
         private System.Windows.Forms.PictureBox BackToMenuButton;
         private System.Windows.Forms.PictureBox closeButton;
+        private System.Windows.Forms.Timer GoUrchisTimer;
     }
 }

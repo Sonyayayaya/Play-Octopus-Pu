@@ -73,16 +73,18 @@ namespace Игра_про_осьминога
             seaUrchins = new PictureBox[3];
             int seaUrchinsSize = random.Next(60,90);
             seaUrchinsSpeed = 3;
-            Image urchins = Image.FromFile("Debug\\ёж.png");
+            Image urchins = Image.FromFile("ёж.png");
+
             for (int i = 0; i < seaUrchins.Length; i++)
             {
-                seaUrchins[i] = new PictureBox();
-                seaUrchins[i].Image = urchins;
-                seaUrchins[i].Size = new Size(seaUrchinsSize, seaUrchinsSize);
-                seaUrchins[i].SizeMode = PictureBoxSizeMode.Zoom;
-                seaUrchins[i].BackColor = Color.Black;
-                seaUrchins[i].Location = new Point((i+1)*random.Next(90,160) + 1000, random.Next(450,600));
-                
+                seaUrchins[i] = new PictureBox
+                {
+                    Image = urchins,
+                    Size = new Size(seaUrchinsSize, seaUrchinsSize),
+                    SizeMode = PictureBoxSizeMode.Zoom,
+                    BackColor = Color.Transparent,
+                    Location = new Point((i + 1) * random.Next(150, 250) + 1000, random.Next(120, 550))
+                };
 
                 this.Controls.Add(seaUrchins[i]);
             }
@@ -135,6 +137,41 @@ namespace Игра_про_осьминога
             GoRightTimer.Stop();
             GoDownTimer.Stop();
             GoUpTimer.Stop();
+        }
+
+        private void GoUrchisTimer_Tick(object sender, EventArgs e)
+        {
+            GoUrchins(seaUrchins, seaUrchinsSpeed);
+        }
+
+        private void GoUrchins(PictureBox[] seaUrchins, int speed)
+        {
+            for (int i = 0; i < seaUrchins.Length; i++)
+            {
+                seaUrchins[i].Left -= (int)(speed*Math.PI) + (int)(Math.Sin(seaUrchins[i].Left * 20 + Math.PI*100)* + Math.Cos(seaUrchins[i].Left*20 + Math.PI * 100));
+
+                if (seaUrchins[i].Left< this.Left)
+                {
+                    int seaUrchinsSize = random.Next(50, 80);
+                    seaUrchins[i].Size = new Size(seaUrchinsSize, seaUrchinsSize);
+                    seaUrchins[i].Location = new Point((i + 1)* random.Next(150,250) + 1000, random.Next(120, 550));
+                }
+
+                CollisionWithSeaUrchin();
+            }
+
+        }
+
+        private void CollisionWithSeaUrchin()
+        {
+            for (int i = 0; i< seaUrchins.Length; i++)
+            {
+                if (mainPlayer.Bounds.IntersectsWith(seaUrchins[i].Bounds))
+                {
+                    mainPlayer.Visible = false;
+                }
+            }
+
         }
     }
 }
