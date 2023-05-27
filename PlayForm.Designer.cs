@@ -51,7 +51,7 @@
             this.mainPlayer.Image = ((System.Drawing.Image)(resources.GetObject("mainPlayer.Image")));
             this.mainPlayer.Location = new System.Drawing.Point(364, 210);
             this.mainPlayer.Name = "mainPlayer";
-            this.mainPlayer.Size = new System.Drawing.Size(136, 128);
+            this.mainPlayer.Size = new System.Drawing.Size(140, 120);
             this.mainPlayer.TabIndex = 2;
             this.mainPlayer.TabStop = false;
             // 

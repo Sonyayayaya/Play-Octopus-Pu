@@ -12,3 +12,5 @@ C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога
 C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра_про_осьминога.RulesForm.resources
 C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра_про_осьминога.SettingsForm.resources
 C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра_про_осьминога.PlayForm.resources
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Interop.WMPLib.dll
+C:\Users\user\Desktop\Учёба\С#\Игра\Игра про осьминога\Игра про осьминога\obj\Debug\Игра про осьминога.csproj.ResolveComReference.cache

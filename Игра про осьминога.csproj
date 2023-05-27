@@ -107,12 +107,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\music\background music.mp3" />
+    <Content Include="bin\Debug\music\throwing.mp3" />
     <Content Include="bin\Debug\ёж.png" />
     <Content Include="bin\Debug\коралл.png" />
     <Content Include="bin\Debug\осьминог приседает.png" />
     <Content Include="bin\Debug\осьминог пуляется кораллом.png" />
     <Content Include="bin\Debug\осьминог.png" />
     <Content Include="bin\Debug\пузырёк.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
