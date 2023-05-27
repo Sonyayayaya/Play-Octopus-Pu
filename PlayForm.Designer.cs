@@ -38,7 +38,8 @@
             this.BackToMenuButton = new System.Windows.Forms.PictureBox();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.GoUrchisTimer = new System.Windows.Forms.Timer(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Bubbles = new System.Windows.Forms.Timer(this.components);
+            this.GoCorals = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackToMenuButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
@@ -104,11 +105,17 @@
             this.GoUrchisTimer.Interval = 10;
             this.GoUrchisTimer.Tick += new System.EventHandler(this.GoUrchisTimer_Tick);
             // 
-            // timer1
+            // Bubbles
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.Bubbles.Enabled = true;
+            this.Bubbles.Interval = 10;
+            this.Bubbles.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // GoCorals
+            // 
+            this.GoCorals.Enabled = true;
+            this.GoCorals.Interval = 10;
+            this.GoCorals.Tick += new System.EventHandler(this.GoCorals_Tick);
             // 
             // PlayForm
             // 
@@ -141,6 +148,7 @@
         private System.Windows.Forms.PictureBox BackToMenuButton;
         private System.Windows.Forms.PictureBox closeButton;
         private System.Windows.Forms.Timer GoUrchisTimer;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer Bubbles;
+        private System.Windows.Forms.Timer GoCorals;
     }
 }

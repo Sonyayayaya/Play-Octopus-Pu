@@ -27,6 +27,8 @@ namespace Игра_про_осьминога
         int seaUrchinsSpeed;
         PictureBox[] bubble;
         int bubbleSpeed;
+        PictureBox[] coral;
+        int coralSpeed;
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -68,7 +70,20 @@ namespace Игра_про_осьминога
         private void PlayForm_Load(object sender, EventArgs e)
         {
             random = new Random();
-            playerSpeed = 15;
+            playerSpeed = 20;
+            coral = new PictureBox[1];
+            Image corales = Image.FromFile("коралл.png");
+            coralSpeed = 60;
+            for(int i = 0; i < coral.Length; i++)
+            {
+                coral[i] = new PictureBox();
+                coral[i].Image = corales;
+                coral[i].BorderStyle = BorderStyle.None;
+                coral[i].Size = new Size(18, 11);
+                coral[i].BackColor = Color.Transparent;
+
+                this.Controls.Add(coral[i]);
+            }
 
             seaUrchinsSpeed = 8;
             seaUrchins = new PictureBox[3];
@@ -108,6 +123,8 @@ namespace Игра_про_осьминога
         }
         private void PlayForm_KeyDown(object sender, KeyEventArgs e)
         {
+            mainPlayer.Image = Image.FromFile("осьминог приседает.png");
+
             if (e.KeyCode == Keys.Left)
             {
                 GoLeftTimer.Start();
@@ -127,10 +144,24 @@ namespace Игра_про_осьминога
             {
                 GoUpTimer.Start();
             }
+
+            if(e.KeyCode == Keys.Space)
+            {
+                mainPlayer.Image = Image.FromFile("осьминог пуляется кораллом.png");
+                for (int i = 0; i < coral.Length; i++)
+                {
+                    if (coral[i].Left > 1280)
+                    {
+                        coral[i].Location = new Point(mainPlayer.Location.X + 100 + i * 50, mainPlayer.Location.Y + 50);
+                    }
+                }
+            }
         }
 
         private void PlayForm_KeyUp(object sender, KeyEventArgs e)
         {
+            mainPlayer.Image = Image.FromFile("осьминог.png");
+
             GoLeftTimer.Stop();
             GoRightTimer.Stop();
             GoDownTimer.Stop();
@@ -189,6 +220,14 @@ namespace Игра_про_осьминога
                 }
             }
 
+        }
+
+        private void GoCorals_Tick(object sender, EventArgs e)
+        {
+            for(int i = 0; i < coral.Length; i++)
+            {
+                coral[i].Left += coralSpeed;
+            }
         }
     }
 }

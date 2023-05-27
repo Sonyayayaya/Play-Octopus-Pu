@@ -108,6 +108,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\ёж.png" />
+    <Content Include="bin\Debug\коралл.png" />
+    <Content Include="bin\Debug\осьминог приседает.png" />
+    <Content Include="bin\Debug\осьминог пуляется кораллом.png" />
+    <Content Include="bin\Debug\осьминог.png" />
     <Content Include="bin\Debug\пузырёк.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
