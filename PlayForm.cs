@@ -105,7 +105,6 @@ namespace Игра_про_осьминога
 
                 this.Controls.Add(bubble[i]);
             }
-
         }
         private void PlayForm_KeyDown(object sender, KeyEventArgs e)
         {
